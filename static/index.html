@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s.Ai</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <button class="collapse-btn" onclick="toggleSidebar()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="collapsed-controls">
+                <button class="collapsed-new-chat" onclick="startNewChat()">
+                    +
+                </button>
+            </div>
+
+            <div class="sidebar-content">
+                <button class="new-chat-btn" onclick="startNewChat()">
+                    <span>+</span>
+                    New chat
+                </button>
+
+                <div class="chat-history">
+                    <div class="chat-history-item">Previous conversation</div>
+                </div>
+
+                <div class="user-profile">
+                    <div class="user-avatar">U</div>
+                    <div>
+                        <div style="font-weight: 500;">User</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="floating-logo">
+                <span>Chat<span class="bar">Bot</span></span>
+            </div>
+
+            <div class="copy-notification" id="copyNotification">
+                Copied to clipboard!
+            </div>
+
+            <div class="chat-container">
+                <div class="messages-container" id="messagesContainer">
+                    <div class="welcome-screen" id="welcomeScreen">
+                        <div class="welcome-greeting">
+                            Ready When You Are
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea
+                            id="messageInput"
+                            class="input-box"
+                            placeholder="Ask s"
+                            rows="1"
+                            onkeydown="handleKeyPress(event)"
+                            oninput="autoResize(this)"
+                        ></textarea>
+                        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="chatbot.js"></script>
+</body>
+</html>
