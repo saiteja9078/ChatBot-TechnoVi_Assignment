@@ -16,7 +16,7 @@ A high-performance, asynchronous Python backend implementing real-time conversat
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ChatBot.git
+git clone https://github.com/saiteja9078/ChatBot.git
 cd ChatBot
 ```
 
